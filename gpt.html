@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>P5X Hover SVG Style</title>
+  <style>
+    body {
+      background: #000;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu-item {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+      transition: transform 0.15s ease;
+      z-index: 1;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item svg {
+     position: fixed;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 20px;
+      transition: transform 0.15s ease;
+      z-index: -1;
+    }
+
+    .menu-item:hover svg {
+      transform: translateX(-50%) scaleY(1);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <div class="menu-item">
+      News
+      <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,50 50,0 100,50" fill="red" />
+      </svg>
+    </div>
+    <div class="menu-item">
+      Characters
+      <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,50 50,0 100,50" fill="red" />
+      </svg>
+    </div>
+    <div class="menu-item">
+      School Life
+      <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,50 50,0 100,50" fill="red" />
+      </svg>
+    </div>
+    <div class="menu-item">
+      Metaverse
+      <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,50 50,0 100,50" fill="red" />
+      </svg>
+    </div>
+    <div class="menu-item">
+      Feature
+      <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="0,50 50,0 100,50" fill="red" />
+      </svg>
+    </div>
+  </div>
+</body>
+</html>
